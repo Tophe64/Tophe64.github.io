@@ -1,0 +1,320 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/font/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    color: rgb(90, 89, 89);
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: 1px solid rgb(219, 218, 218);
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.6rem;
+    transition: 0.4s ease;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.first-header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+}
+
+.first-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgb(241, 240, 240);
+    bottom: 0;
+}
+
+.left-first {
+    margin: auto 30px;
+    text-align: start;
+}
+
+.first-header img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.second-header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    position: relative;
+}
+
+.second-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgb(241, 240, 240);
+    text-shadow: 5px 5px 10px rgb(219, 219, 219);
+    bottom: 0;
+}
+
+.right-second {
+    margin: auto 30px;
+    text-align: start;
+}
+
+.second-header img {
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.third-header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    position: relative;
+}
+
+.third-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgb(241, 240, 240);
+    text-shadow: 5px 5px 10px rgb(219, 219, 219);
+    bottom: 0;
+}
+
+.third-header img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.left-third {
+    margin: auto 30px;
+    text-align: start;
+}
+
+footer {
+    position: relative;
+    padding: 40px;
+    min-height: 500px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "i1 i2"
+        "ta ta"
+        "btn btn";
+    width: 60%;
+    margin: 0 auto;
+}
+
+div {
+    font-weight: 500;
+}
+
+.name,
+.email {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    margin-top: 20px;
+}
+
+input {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+#name {
+    height: 100%;
+    margin: 20px 5px 0 0;
+}
+
+#email {
+    height: 100%;
+    margin: 20px 0 0 5px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    grid-area: ta;
+    transform: scaleY(1.6);
+    height: 70%;
+    font-size: 0.8rem;
+}
+
+textarea {
+    resize: none;
+    margin-top: 20px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+#btn-submit {
+    background: white;
+    grid-area: btn;
+    margin: auto;
+    margin-top: 30px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 25px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+#btn-submit:hover {
+    transform: scale(1.05);
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background: rgb(241, 240, 240);
+    text-shadow: 5px 5px 10px rgb(219, 219, 219);
+    bottom: 120px;
+}
+
+i {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 30px;
+}
+
+i:nth-child(2) {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 20px;
+    padding: 10px 13px;
+    margin: 0 30px;
+}
+
+/* *********** MEDIA QUERIES *************** */
+
+@media screen and (max-width: 690px) {
+    .first-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-first {
+        margin: 40px;
+    }
+
+    .first-header img {
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .second-header {
+        display: block;
+        margin: 30px auto;
+    }
+
+    .second-header img {
+        display: none;
+    }
+
+    .second-header::after {
+        bottom: -30px;
+        transform: translate(-50%)
+    }
+
+    .third-header {
+        display: block;
+        margin: 60px auto;
+    }
+
+    .third-header img {
+        display: none;
+    }
+
+    .third-header::after {
+        bottom: -30px;
+        transform: translate(-50%)
+    }
+
+    form {
+        width: 90%;
+    }
+
+    i {
+        margin: 0 10px;
+    }
+
+    i:nth-child(2) {
+        margin: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name,
+    .email {
+        height: 70px;
+    }
+
+    .message {
+        transform: none;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    #btn-submit {
+        margin-bottom: 50px;
+    }
+
+    footer::after {
+        bottom: 130px;
+    }
+
+    i {
+        margin: 50px 5px 0;
+    }
+
+}
